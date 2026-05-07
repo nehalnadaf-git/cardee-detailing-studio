@@ -72,25 +72,42 @@ export function useScrollAnimation(options: ScrollAnimationOptions = {}) {
       { threshold, rootMargin }
     );
 
-    // Wire up each animated child
+    // ── Step 1: add pre-animate immediately so elements are hidden
+    //   before the first paint (prevents flash of visible content).
     section.querySelectorAll<HTMLElement>('[data-animate]').forEach((el) => {
       const delay = el.dataset.animateDelay ?? '0';
       const duration = el.dataset.animateDuration ?? '650';
       el.style.setProperty('--anim-delay', `${delay}ms`);
       el.style.setProperty('--anim-duration', `${duration}ms`);
       el.classList.add('pre-animate');
-
-      // Fire immediately if already in viewport on mount
-      const rect = el.getBoundingClientRect();
-      if (rect.top < window.innerHeight && rect.bottom > 0) {
-        el.classList.add('is-animated');
-        return;
-      }
-
-      observer.observe(el);
     });
 
-    return () => observer.disconnect();
+    // ── Step 2: after the first paint, check which elements are already
+    //   visible and wire up the observer for the rest.
+    //   Using rAF ensures getBoundingClientRect() reflects the real layout
+    //   (images loaded, scroll position restored) instead of the initial
+    //   collapsed state — which was causing elements to be wrongly detected
+    //   as "in viewport" on first load and skip their entrance animation.
+    let rafId: number;
+    rafId = requestAnimationFrame(() => {
+      rafId = requestAnimationFrame(() => {
+        section.querySelectorAll<HTMLElement>('[data-animate]').forEach((el) => {
+          const rect = el.getBoundingClientRect();
+          if (rect.top < window.innerHeight && rect.bottom > 0) {
+            // Already visible on load — animate immediately, no delay needed
+            el.style.setProperty('--anim-delay', '0ms');
+            el.classList.add('is-animated');
+          } else {
+            observer.observe(el);
+          }
+        });
+      });
+    });
+
+    return () => {
+      cancelAnimationFrame(rafId);
+      observer.disconnect();
+    };
   }, [threshold, rootMargin, once]);
 
   useEffect(() => {
