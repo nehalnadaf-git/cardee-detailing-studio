@@ -151,7 +151,6 @@ export function DesktopAccordionGallery({ items }: { items: GalleryItem[] }) {
               >
                 [{String(idx + 1).padStart(2, '0')} / {String(items.length).padStart(2, '0')}]
               </p>
-              {/* Caption */}
               <p
                 style={{
                   margin: '0 0 2px',
@@ -161,27 +160,10 @@ export function DesktopAccordionGallery({ items }: { items: GalleryItem[] }) {
                   color: '#fff',
                   letterSpacing: '-0.01em',
                   lineHeight: 1.2,
-                  whiteSpace: 'nowrap',
-                  overflow: 'hidden',
-                  textOverflow: 'ellipsis',
                 }}
               >
-                {item.caption}
+                CarDee Detailing Studio
               </p>
-              {item.subtitle && (
-                <p
-                  style={{
-                    margin: 0,
-                    fontSize: '11px',
-                    fontFamily: 'Inter, sans-serif',
-                    color: 'rgba(255,255,255,0.55)',
-                    letterSpacing: '0.04em',
-                    textTransform: 'uppercase',
-                  }}
-                >
-                  {item.subtitle}
-                </p>
-              )}
             </div>
 
             {/* ── Collapsed label (shown when inactive) ── */}
@@ -209,7 +191,7 @@ export function DesktopAccordionGallery({ items }: { items: GalleryItem[] }) {
                   transform: 'rotate(180deg)',
                 }}
               >
-                {item.caption}
+                CarDee
               </span>
             </div>
           </div>
@@ -378,7 +360,7 @@ export function MobileAccordionGallery({ items }: { items: GalleryItem[] }) {
               }}
             />
 
-            {/* ── Collapsed row (title + index pill) ── */}
+            {/* ── Collapsed row (brand + index pill) ── */}
             <div
               style={{
                 position: 'absolute',
@@ -395,34 +377,18 @@ export function MobileAccordionGallery({ items }: { items: GalleryItem[] }) {
               <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                 {/* Gold line accent */}
                 <div style={{ width: '3px', height: '28px', background: GOLD, borderRadius: '2px', flexShrink: 0 }} />
-                <div>
-                  <p
-                    style={{
-                      margin: 0,
-                      fontSize: '13px',
-                      fontWeight: 600,
-                      fontFamily: 'Inter, sans-serif',
-                      color: '#fff',
-                      lineHeight: 1.2,
-                    }}
-                  >
-                    {item.caption}
-                  </p>
-                  {item.subtitle && (
-                    <p
-                      style={{
-                        margin: '1px 0 0',
-                        fontSize: '10px',
-                        fontFamily: 'Inter, sans-serif',
-                        color: 'rgba(255,255,255,0.45)',
-                        letterSpacing: '0.04em',
-                        textTransform: 'uppercase',
-                      }}
-                    >
-                      {item.subtitle}
-                    </p>
-                  )}
-                </div>
+                <p
+                  style={{
+                    margin: 0,
+                    fontSize: '13px',
+                    fontWeight: 600,
+                    fontFamily: 'Inter, sans-serif',
+                    color: '#fff',
+                    lineHeight: 1.2,
+                  }}
+                >
+                  CarDee Detailing Studio
+                </p>
               </div>
               {/* Index pill */}
               <span
@@ -470,7 +436,7 @@ export function MobileAccordionGallery({ items }: { items: GalleryItem[] }) {
               </p>
               <p
                 style={{
-                  margin: '0 0 2px',
+                  margin: 0,
                   fontSize: '17px',
                   fontWeight: 600,
                   fontFamily: 'Inter, sans-serif',
@@ -479,22 +445,8 @@ export function MobileAccordionGallery({ items }: { items: GalleryItem[] }) {
                   lineHeight: 1.2,
                 }}
               >
-                {item.caption}
+                CarDee Detailing Studio
               </p>
-              {item.subtitle && (
-                <p
-                  style={{
-                    margin: 0,
-                    fontSize: '11px',
-                    fontFamily: 'Inter, sans-serif',
-                    color: 'rgba(255,255,255,0.5)',
-                    letterSpacing: '0.06em',
-                    textTransform: 'uppercase',
-                  }}
-                >
-                  {item.subtitle}
-                </p>
-              )}
             </div>
           </div>
         );
