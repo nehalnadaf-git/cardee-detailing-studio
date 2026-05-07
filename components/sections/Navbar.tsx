@@ -159,25 +159,8 @@ export default function Navbar() {
             overflow: 'hidden',
           }}
         >
-          {/* Close button – top right only, no logo */}
-          <div style={{ display: 'flex', justifyContent: 'flex-end', padding: '20px 20px 12px' }}>
-            <button
-              onClick={closeMenu}
-              style={{
-                width: 38, height: 38, borderRadius: '50%',
-                border: '1px solid #252525', background: '#131313',
-                display: 'flex', alignItems: 'center', justifyContent: 'center',
-                cursor: 'pointer',
-              }}
-            >
-              <svg width="13" height="13" fill="none" viewBox="0 0 14 14">
-                <path d="M1 1l12 12M13 1L1 13" stroke="rgba(255,255,255,0.45)" strokeWidth="1.8" strokeLinecap="round" />
-              </svg>
-            </button>
-          </div>
-
-          {/* Studio label */}
-          <div style={{ paddingLeft: 24, paddingBottom: 20 }}>
+          {/* Studio label — top of panel, no duplicate close button */}
+          <div style={{ padding: '24px 24px 16px' }}>
             <p style={{
               fontSize: 10, fontFamily: 'monospace', letterSpacing: '0.14em',
               textTransform: 'uppercase', color: 'rgba(200,169,110,0.6)',
