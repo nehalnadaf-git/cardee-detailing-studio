@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+/* ─── Design Tokens (Tailwind v4 CSS-first config) ─── */
+@theme inline {
+  /* Fonts */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Brand colors */
+  --color-gold:           #C8A96E;
+  --color-gold-hover:     #D4B87A;
+  --color-gold-light:     #E8D5A3;
+
+  /* Dark palette */
+  --color-dark:           #0A0A0A;
+  --color-dark-secondary: #111111;
+  --color-dark-card:      #1A1A1A;
+  --color-dark-border:    #2A2A2A;
+  --color-dark-border-light: #3A3A3A;
+
+  /* Olive / accent */
+  --color-olive:          #3D1010;
+  --color-olive-light:    #4D1818;
+  --color-olive-card:     #280A0A;
+
+  /* Text helpers */
+  --color-muted-foreground: rgba(255,255,255,0.45);
+}
+
+/* ─── Base ─────────────────────────────────────────── */
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+    border-color: var(--color-dark-border);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: var(--color-dark);
+    color: #ffffff;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* ─── Scrollbar ─────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #0A0A0A; }
+::-webkit-scrollbar-thumb { background: #2A2A2A; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #3A3A3A; }
+
+/* ═══════════════════════════════════════════════════════════
+   PREMIUM SCROLL ANIMATION SYSTEM
+   ─ GPU-accelerated, staggerable, reduced-motion-safe
+   ═══════════════════════════════════════════════════════════ */
+
+/* Shared easing curves */
+:root {
+  --ease-out-expo:  cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-spring:    cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* ── 1. Pre-animate state (hidden) ──────────────────── */
+[data-animate].pre-animate {
+  will-change: opacity, transform, filter, clip-path;
+  animation-fill-mode: both;
+}
+
+/* ── fade-up ── */
+[data-animate="fade-up"].pre-animate {
+  opacity: 0;
+  transform: translateY(48px);
+  filter: blur(2px);
+}
+[data-animate="fade-up"].is-animated {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+  transition:
+    opacity   var(--anim-duration, 650ms) var(--ease-out-expo) var(--anim-delay, 0ms),
+    transform var(--anim-duration, 650ms) var(--ease-out-expo) var(--anim-delay, 0ms),
+    filter    calc(var(--anim-duration, 650ms) * 0.6) ease     var(--anim-delay, 0ms);
+}
+
+/* ── fade-down ── */
+[data-animate="fade-down"].pre-animate {
+  opacity: 0;
+  transform: translateY(-32px);
+  filter: blur(2px);
+}
+[data-animate="fade-down"].is-animated {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+  transition:
+    opacity   var(--anim-duration, 650ms) var(--ease-out-expo) var(--anim-delay, 0ms),
+    transform var(--anim-duration, 650ms) var(--ease-out-expo) var(--anim-delay, 0ms),
+    filter    calc(var(--anim-duration, 650ms) * 0.6) ease     var(--anim-delay, 0ms);
+}
+
+/* ── fade-left (enters from left) ── */
+[data-animate="fade-left"].pre-animate {
+  opacity: 0;
+  transform: translateX(-52px);
+}
+[data-animate="fade-left"].is-animated {
+  opacity: 1;
+  transform: translateX(0);
+  transition:
+    opacity   var(--anim-duration, 650ms) var(--ease-out-expo) var(--anim-delay, 0ms),
+    transform var(--anim-duration, 650ms) var(--ease-out-expo) var(--anim-delay, 0ms);
+}
+
+/* ── fade-right (enters from right) ── */
+[data-animate="fade-right"].pre-animate {
+  opacity: 0;
+  transform: translateX(52px);
+}
+[data-animate="fade-right"].is-animated {
+  opacity: 1;
+  transform: translateX(0);
+  transition:
+    opacity   var(--anim-duration, 650ms) var(--ease-out-expo) var(--anim-delay, 0ms),
+    transform var(--anim-duration, 650ms) var(--ease-out-expo) var(--anim-delay, 0ms);
+}
+
+/* ── scale-up ── */
+[data-animate="scale-up"].pre-animate {
+  opacity: 0;
+  transform: scale(0.88) translateY(24px);
+}
+[data-animate="scale-up"].is-animated {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  transition:
+    opacity   var(--anim-duration, 650ms) var(--ease-out-expo) var(--anim-delay, 0ms),
+    transform var(--anim-duration, 650ms) var(--ease-spring)   var(--anim-delay, 0ms);
+}
+
+/* ── blur-in ── */
+[data-animate="blur-in"].pre-animate {
+  opacity: 0;
+  filter: blur(12px) saturate(0.4);
+  transform: scale(1.04);
+}
+[data-animate="blur-in"].is-animated {
+  opacity: 1;
+  filter: blur(0) saturate(1);
+  transform: scale(1);
+  transition:
+    opacity   var(--anim-duration, 650ms) var(--ease-out-expo)  var(--anim-delay, 0ms),
+    filter    var(--anim-duration, 650ms) var(--ease-out-quart) var(--anim-delay, 0ms),
+    transform var(--anim-duration, 650ms) var(--ease-out-expo)  var(--anim-delay, 0ms);
+}
+
+/* ── clip-up (cinematic reveal) ── */
+[data-animate="clip-up"].pre-animate {
+  opacity: 0;
+  clip-path: inset(100% 0 0 0);
+  transform: translateY(16px);
+}
+[data-animate="clip-up"].is-animated {
+  opacity: 1;
+  clip-path: inset(0% 0 0 0);
+  transform: translateY(0);
+  transition:
+    opacity    calc(var(--anim-duration, 650ms) * 0.5) ease                 var(--anim-delay, 0ms),
+    clip-path  var(--anim-duration, 650ms)             var(--ease-out-expo) var(--anim-delay, 0ms),
+    transform  var(--anim-duration, 650ms)             var(--ease-out-expo) var(--anim-delay, 0ms);
+}
+
+/* ─── Reduced motion override ───────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  [data-animate].pre-animate,
+  [data-animate].is-animated {
+    transition: opacity 0.2s ease !important;
+    transform: none !important;
+    filter: none !important;
+    clip-path: none !important;
+  }
+  [data-animate].pre-animate { opacity: 0; }
+  [data-animate].is-animated { opacity: 1; }
+}
+
+/* ─── Legacy reveal helpers (kept for compatibility) ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s cubic-bezier(0.16,1,0.3,1), transform 0.6s cubic-bezier(0.16,1,0.3,1);
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+.reveal-left  { opacity: 0; transform: translateX(-40px); transition: opacity 0.6s cubic-bezier(0.16,1,0.3,1), transform 0.6s cubic-bezier(0.16,1,0.3,1); }
+.reveal-left.visible  { opacity: 1; transform: translateX(0); }
+
+.reveal-right { opacity: 0; transform: translateX(40px);  transition: opacity 0.6s cubic-bezier(0.16,1,0.3,1), transform 0.6s cubic-bezier(0.16,1,0.3,1); }
+.reveal-right.visible { opacity: 1; transform: translateX(0); }
+
+.reveal-scale { opacity: 0; transform: scale(0.95); transition: opacity 0.6s cubic-bezier(0.16,1,0.3,1), transform 0.6s cubic-bezier(0.16,1,0.3,1); }
+.reveal-scale.visible { opacity: 1; transform: scale(1); }
+
+/* ─── Stagger children ──────────────────────────────── */
+.stagger-children > *:nth-child(1) { transition-delay: 0ms; }
+.stagger-children > *:nth-child(2) { transition-delay: 80ms; }
+.stagger-children > *:nth-child(3) { transition-delay: 160ms; }
+.stagger-children > *:nth-child(4) { transition-delay: 240ms; }
+.stagger-children > *:nth-child(5) { transition-delay: 320ms; }
+.stagger-children > *:nth-child(6) { transition-delay: 400ms; }
+
+/* ─── Animation delays ──────────────────────────────── */
+.animate-delay-100 { animation-delay: 100ms; }
+.animate-delay-200 { animation-delay: 200ms; }
+.animate-delay-300 { animation-delay: 300ms; }
+.animate-delay-400 { animation-delay: 400ms; }
+.animate-delay-500 { animation-delay: 500ms; }
