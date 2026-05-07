@@ -7,7 +7,6 @@ import About from '@/components/sections/About';
 import Gallery from '@/components/sections/Gallery';
 import VideoGallery from '@/components/sections/VideoGallery';
 import USP from '@/components/sections/USP';
-import ServicesIntro from '@/components/sections/ServicesIntro';
 import InteriorService from '@/components/sections/InteriorService';
 import ServicesGrid from '@/components/sections/ServicesGrid';
 import ServiceCards from '@/components/sections/ServiceCards';
@@ -27,7 +26,6 @@ export default function HomeClient() {
         <Gallery />
         <VideoGallery />
         <USP />
-        <ServicesIntro />
         <InteriorService />
         <ServicesGrid />
         <ServiceCards />

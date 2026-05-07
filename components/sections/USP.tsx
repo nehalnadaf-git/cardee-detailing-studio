@@ -7,7 +7,7 @@ export default function USP() {
   const sectionRef = useScrollAnimation({ threshold: 0.1 });
 
   return (
-    <section ref={sectionRef} className="bg-dark pt-16 lg:pt-24 pb-10 lg:pb-16">
+    <section ref={sectionRef} className="bg-dark pt-16 lg:pt-24 pb-0">
       <div className="max-w-[1280px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16">
         {/* Section Label */}
         <div
