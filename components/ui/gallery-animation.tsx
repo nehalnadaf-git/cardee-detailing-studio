@@ -8,7 +8,7 @@
 // Opacity and transform (scale) are GPU-composited and also done via CSS.
 // ─────────────────────────────────────────────────────────────────────────────
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
@@ -216,57 +216,13 @@ const AUTO_CYCLE_MS = 3400; // ms
 
 export function MobileAccordionGallery({ items }: { items: GalleryItem[] }) {
   const [activeIdx, setActiveIdx] = useState(0);
-  const [paused, setPaused]       = useState(false);
-
-  // Auto-cycle — simple timeout, resets on each change
-  useEffect(() => {
-    if (paused) return;
-    const t = setTimeout(
-      () => setActiveIdx(i => (i + 1) % items.length),
-      AUTO_CYCLE_MS,
-    );
-    return () => clearTimeout(t);
-  }, [activeIdx, paused, items.length]);
 
   const handleTap = (idx: number) => {
-    setPaused(true);
     setActiveIdx(idx);
-    // Resume auto-cycle after 8 s of inactivity
-    setTimeout(() => setPaused(false), 8000);
   };
 
   return (
     <>
-      {/* ── Progress dots ── */}
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'center',
-          gap: '6px',
-          marginBottom: '12px',
-        }}
-      >
-        {items.map((_, i) => (
-          <button
-            key={i}
-            onClick={() => handleTap(i)}
-            aria-label={`Photo ${i + 1}`}
-            style={{
-              // Width transition via CSS — GPU-friendly
-              width: activeIdx === i ? 22 : 6,
-              height: 6,
-              borderRadius: 9999,
-              background: activeIdx === i ? GOLD : 'rgba(255,255,255,0.18)',
-              border: 'none',
-              padding: 0,
-              cursor: 'pointer',
-              flexShrink: 0,
-              transition: `width 0.35s ${EASE}, background 0.25s ease`,
-            }}
-          />
-        ))}
-      </div>
-
       {/* ── Panels ── */}
       <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
         {items.map((item, idx) => {
