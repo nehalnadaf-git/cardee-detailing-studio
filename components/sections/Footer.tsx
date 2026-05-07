@@ -121,7 +121,7 @@ export default function Footer() {
               <ArrowUpRight className="w-3 h-3 text-muted-foreground" />
             </div>
 
-            <div className="grid grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-6">
               {/* Service */}
               <div>
                 <h4 className="text-white text-sm font-medium mb-4">Services</h4>
@@ -182,7 +182,7 @@ export default function Footer() {
           <img
             src="/cardee logo/Cardee logo.webp"
             alt="CarDee Detailing Studio"
-            className="h-[300px] sm:h-[500px] w-auto max-w-full object-contain scale-110 -my-10"
+            className="h-[180px] sm:h-[400px] w-auto max-w-full object-contain scale-110 -my-6 sm:-my-10"
           />
         </div>
 

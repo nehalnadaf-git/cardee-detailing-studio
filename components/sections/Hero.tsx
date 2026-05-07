@@ -14,9 +14,9 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="home" className="relative bg-dark pt-28 pb-8 lg:pt-32 lg:pb-12">
-      <div className="max-w-[1280px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+    <section id="home" className="relative bg-dark pt-24 pb-10 lg:pt-32 lg:pb-12">
+      <div className="max-w-[1280px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16">
+        <div className="grid lg:grid-cols-2 gap-6 lg:gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-6">
             {/* Location Badge */}
@@ -41,11 +41,9 @@ export default function Hero() {
                 transition:
                   'opacity 0.75s cubic-bezier(0.16,1,0.3,1) 80ms, transform 0.75s cubic-bezier(0.16,1,0.3,1) 80ms, filter 0.5s ease 80ms',
               }}
-              className="text-4xl sm:text-5xl lg:text-[56px] font-bold text-white leading-[1.05] tracking-tight"
+              className="text-[2.1rem] sm:text-5xl lg:text-[56px] font-bold text-white leading-[1.08] tracking-tight"
             >
-              Bringing Your Car's
-              <br />
-              Shine Back to Life
+              Bringing Your Car&apos;s Shine Back to Life
             </h1>
 
             <p
@@ -93,9 +91,10 @@ export default function Hero() {
                 'opacity 0.8s cubic-bezier(0.16,1,0.3,1) 300ms, transform 0.8s cubic-bezier(0.16,1,0.3,1) 300ms, filter 0.55s ease 300ms',
             }}
           >
-            <div className="flex gap-3 justify-end">
-              <div className="relative mt-8">
-                <div className="w-40 sm:w-48 h-52 sm:h-60 rounded-2xl overflow-hidden">
+            <div className="flex gap-3 justify-center lg:justify-end">
+              {/* Card 1 */}
+              <div className="relative mt-6 flex-1 max-w-[160px] sm:max-w-[200px]">
+                <div className="rounded-2xl overflow-hidden aspect-[3/4]">
                   <img
                     src="/assets/asset_1.jpg"
                     alt="Professional detailing at CarDee"
@@ -109,8 +108,9 @@ export default function Hero() {
                   Professional Detailers
                 </p>
               </div>
-              <div className="relative">
-                <div className="w-40 sm:w-48 h-52 sm:h-60 rounded-2xl overflow-hidden">
+              {/* Card 2 */}
+              <div className="relative flex-1 max-w-[160px] sm:max-w-[200px]">
+                <div className="rounded-2xl overflow-hidden aspect-[3/4]">
                   <img
                     src="/assets/asset-2.webp"
                     alt="Book your service at CarDee"

@@ -56,6 +56,8 @@ export const viewport: Viewport = {
   themeColor: '#0A0A0A',
   width: 'device-width',
   initialScale: 1,
+  maximumScale: 1,   // prevents iOS auto-zoom on input focus
+  userScalable: false,
 };
 
 const localBusinessSchema = {

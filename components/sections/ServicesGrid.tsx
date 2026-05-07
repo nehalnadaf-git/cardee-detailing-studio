@@ -50,7 +50,7 @@ export default function ServicesGrid() {
           </h2>
 
           <div
-            className="flex gap-4"
+            className="flex flex-wrap gap-3"
             data-animate="fade-up"
             data-animate-delay="120"
             data-animate-duration="700"

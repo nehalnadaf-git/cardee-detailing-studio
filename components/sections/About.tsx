@@ -10,7 +10,7 @@ export default function About() {
   return (
     <section ref={sectionRef} id="about" className="bg-dark py-16 lg:py-24">
       <div className="max-w-[1280px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-start">
+        <div className="grid lg:grid-cols-2 gap-6 lg:gap-16 items-start">
           {/* Left - Small text */}
           <div
             className="space-y-4"

@@ -36,6 +36,8 @@
   }
   html {
     scroll-behavior: smooth;
+    /* Prevent horizontal overflow on mobile */
+    overflow-x: hidden;
   }
   body {
     background-color: var(--color-dark);
@@ -43,7 +45,17 @@
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    /* Prevent content from going under iOS home indicator */
+    padding-bottom: env(safe-area-inset-bottom);
+    overflow-x: hidden;
   }
+  /* Ensure minimum touch target size on mobile */
+  button, a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  /* Override for inline/decorative anchors and buttons */
+  .no-min-h { min-height: unset; min-width: unset; }
 }
 
 /* ─── Scrollbar ─────────────────────────────────────── */
