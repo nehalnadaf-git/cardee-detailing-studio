@@ -30,7 +30,7 @@ export default function InteriorService() {
         {/* ── Section bridge: "From a simple wash..." headline ── */}
         <div
           className="mb-12 lg:mb-16"
-          data-animate="clip-up"
+          data-animate="fade-up"
           data-animate-delay="0"
           data-animate-duration="750"
         >
