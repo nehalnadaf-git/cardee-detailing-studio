@@ -338,7 +338,7 @@ export default function VideoGallery() {
                 </div>
               </div>
               <button
-                onClick={openModal}
+                onClick={() => openModal()}
                 className="inline-flex items-center gap-2 text-xs font-medium transition-colors"
                 style={{ color: '#C8A96E', background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}
               >

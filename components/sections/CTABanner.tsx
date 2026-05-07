@@ -34,7 +34,7 @@ export default function CTABanner() {
                 Call Now
               </a>
               <button
-                onClick={openModal}
+                onClick={() => openModal()}
                 className="inline-flex items-center justify-center px-6 py-2.5 text-sm font-medium rounded-md transition-all duration-200"
                 style={{ background: '#C8A96E', color: '#0A0A0A' }}
               >
