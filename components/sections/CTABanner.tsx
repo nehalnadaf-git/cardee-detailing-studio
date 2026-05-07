@@ -57,13 +57,13 @@ export default function CTABanner() {
             data-animate-delay="180"
             data-animate-duration="800"
           >
-            <div className="relative rounded-2xl overflow-hidden aspect-[16/10] sm:aspect-[4/5] lg:aspect-[3/4]">
+            <div className="relative rounded-2xl overflow-hidden sm:aspect-[4/5] lg:aspect-[3/4]">
               <img
                 src="/assets/asset_8.webp"
                 alt="CarDee Detailing Studio Hubli"
                 loading="lazy"
                 decoding="async"
-                className="w-full h-full object-cover"
+                className="w-full sm:absolute sm:inset-0 sm:w-full sm:h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-dark/30" />
             </div>

@@ -16,13 +16,13 @@ export default function CarShowcase() {
             data-animate-delay="0"
             data-animate-duration="700"
           >
-            <div className="relative rounded-2xl overflow-hidden aspect-[3/4]">
+            <div className="relative rounded-2xl overflow-hidden sm:aspect-[3/4]">
               <img
                 src="/assets/white.webp"
                 alt="White car after ceramic coating at CarDee studio"
                 loading="lazy"
                 decoding="async"
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                className="w-full h-full object-cover sm:absolute sm:inset-0 sm:w-full sm:h-full transition-transform duration-500 group-hover:scale-105"
               />
               {/* Badge */}
               <div className="absolute top-4 left-4 bg-dark/80 backdrop-blur-sm border border-dark-border rounded-md px-3 py-1.5">
@@ -44,13 +44,13 @@ export default function CarShowcase() {
             data-animate-delay="120"
             data-animate-duration="700"
           >
-            <div className="relative rounded-2xl overflow-hidden aspect-[3/4]">
+            <div className="relative rounded-2xl overflow-hidden sm:aspect-[3/4]">
               <img
                 src="/assets/black.webp"
                 alt="Black car after detailing at CarDee studio"
                 loading="lazy"
                 decoding="async"
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                className="w-full h-full object-cover sm:absolute sm:inset-0 sm:w-full sm:h-full transition-transform duration-500 group-hover:scale-105"
               />
             </div>
           </div>
@@ -62,13 +62,13 @@ export default function CarShowcase() {
             data-animate-delay="240"
             data-animate-duration="700"
           >
-            <div className="relative rounded-2xl overflow-hidden aspect-[16/10] sm:aspect-[16/9]">
+            <div className="relative rounded-2xl overflow-hidden sm:aspect-[16/9]">
               <img
                 src="/assets/red-xuv.webp"
                 alt="Red Mahindra XUV700 after premium detailing"
                 loading="lazy"
                 decoding="async"
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                className="w-full h-full object-cover sm:absolute sm:inset-0 sm:w-full sm:h-full transition-transform duration-500 group-hover:scale-105"
               />
               {/* Number */}
               <div className="absolute bottom-4 left-4">

@@ -98,22 +98,7 @@ export default function InteriorService() {
                   style={{ borderColor: '#C8A96E' }}
                 />
               </div>
-              {/* Service badge */}
-              <div
-                className="absolute top-4 right-4 flex items-center gap-2 px-3 py-1.5 rounded-full"
-                style={{
-                  background: 'rgba(0,0,0,0.65)',
-                  backdropFilter: 'blur(8px)',
-                  border: '1px solid rgba(200,169,110,0.3)',
-                }}
-              >
-                <span
-                  className="text-[9px] font-mono tracking-widest uppercase"
-                  style={{ color: '#C8A96E' }}
-                >
-                  Service 01
-                </span>
-              </div>
+
             </div>
           </div>
 
