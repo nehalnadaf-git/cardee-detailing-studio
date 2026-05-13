@@ -34,7 +34,7 @@ const services = [
     description:
       "Advanced chemical polymer solution that bonds to your vehicle's paint. Provides ultra-high gloss, chemical resistance, and superior hydrophobicity.",
     tags: 'Ceramic Coating · 9H Hardness · High Gloss',
-    image: '/service-images/3_ceramic_coating_ppf.webp',
+    image: '/service-images/3_ceramic_coating.webp',
     imageAlt: 'Ceramic coating service at CarDee',
     modalService: 'Ceramic Coating',
   },
@@ -45,7 +45,7 @@ const services = [
     description:
       "A clear, self-healing film that protects your car's paint from stone chips, scratches, and road debris. The ultimate shield for your vehicle.",
     tags: 'PPF · Self-Healing · Scratch Protection',
-    image: '/service-images/3_ceramic_coating_ppf.webp',
+    image: '/service-images/4_paint_protection_film.webp',
     imageAlt: 'Paint Protection Film (PPF) at CarDee',
     modalService: 'Paint Protection Film (PPF)',
   },
@@ -56,7 +56,7 @@ const services = [
     description:
       "A high-quality protective barrier applied to your car's paint surface — shields against UV rays, water spots, and minor abrasions for long-lasting gloss.",
     tags: 'Paint Protection · Paint Shield · UV Protection',
-    image: '/service-images/4_teflon_paint_protection.webp',
+    image: '/service-images/5_paint_protection.webp',
     imageAlt: 'Paint protection service at CarDee',
     modalService: 'Paint Protection',
   },
@@ -67,7 +67,7 @@ const services = [
     description:
       'Accident repair, dent removal, full-body repainting, buffing, and paint restoration — we bring your car back to its original factory color and condition.',
     tags: 'Denting · Repainting · Restoration',
-    image: '/service-images/5_denting_painting_restoration.webp',
+    image: '/service-images/6_denting_repainting.webp',
     imageAlt: 'Denting and repainting at CarDee',
     modalService: 'Denting & Repainting',
   },
@@ -78,7 +78,7 @@ const services = [
     description:
       'A thorough, streak-free car wash using premium shampoos and high-pressure rinse — removing dirt, grime, and road contaminants from every surface.',
     tags: 'Car Wash · Shampoo · Deep Clean',
-    image: '/service-images/6_premium_high_pressure_wash.webp',
+    image: '/service-images/7_premium_high_pressure_wash.webp',
     imageAlt: 'Premium car wash at CarDee',
     modalService: 'Exterior Wash & Polish',
   },
