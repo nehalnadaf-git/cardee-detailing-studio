@@ -268,7 +268,7 @@ export default function Gallery() {
               style={{ width: '13px', height: '13px', flexShrink: 0 }}
               strokeWidth={1.5}
             />
-            <span>{GALLERY_ITEMS.length} real photos from our Hubli studio</span>
+            <span>{GALLERY_ITEMS.length} real photos from our studio</span>
           </div>
 
           {/* Right — address pill */}
@@ -291,7 +291,7 @@ export default function Gallery() {
               style={{ width: '11px', height: '11px', flexShrink: 0 }}
               strokeWidth={2}
             />
-            <span>Unkal Cross, Vidyanagar — Hubli</span>
+            <span>Unkal Cross, Vidyanagar</span>
           </div>
         </div>
       </div>

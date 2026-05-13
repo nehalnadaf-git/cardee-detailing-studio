@@ -15,7 +15,7 @@ const reasons = [
   },
   {
     num: '[03]',
-    title: "1,500+ Happy Customers — From daily drivers to luxury vehicles, we've earned the trust of Hubli's car community.",
+    title: "1,500+ Happy Customers — From daily drivers to luxury vehicles, we've earned the trust of discerning car owners who demand the best.",
   },
   {
     num: '[04]',
@@ -46,7 +46,7 @@ export default function ServicesGrid() {
             data-animate-delay="0"
             data-animate-duration="700"
           >
-            Why Hubli's car owners trust CarDee with their vehicles.
+            Why car owners trust CarDee with their vehicles.
           </h2>
 
           <div

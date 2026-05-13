@@ -81,7 +81,7 @@ export default function InteriorService() {
             >
               <Image
                 src="/assets/asset-7.webp"
-                alt="Interior detailing at CarDee Hubli"
+                alt="Interior detailing at CarDee"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 style={{ objectFit: 'cover' }}

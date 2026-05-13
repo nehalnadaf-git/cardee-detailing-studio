@@ -32,13 +32,13 @@ export default function Footer() {
       'Interior Detailing',
       'Ceramic Coating',
       'Paint Protection Film (PPF)',
-      'Teflon Coating',
+      'Paint Protection',
       'Denting & Repainting',
     ],
     official: [
       'Unkal Cross, Vidyanagar',
-      'Hubli, Karnataka 580021',
       'Opp. Royal Oak Showroom',
+      'Karnataka 580031',
       'Call Now',
       '9:30 AM – 8:00 PM Daily',
     ],
@@ -81,7 +81,7 @@ export default function Footer() {
               </div>
               <p className="text-white text-sm leading-relaxed">
                 Unkal Cross, Opp. Royal Oak Showroom<br />
-                Vidyanagar, Hubballi, Karnataka 580031
+                Vidyanagar, Karnataka 580031
               </p>
             </div>
 

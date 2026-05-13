@@ -23,7 +23,7 @@ export default function About() {
               <span className="text-white font-medium">CarDee Detailing Studio</span>
             </p>
             <p className="text-muted-foreground text-xs max-w-xs leading-relaxed">
-              Established in 2022. Serving Hubli &amp; Dharwad with professional, premium car care.
+              Established in 2022. Professional, premium car care for every make and model.
             </p>
           </div>
 
@@ -40,7 +40,7 @@ export default function About() {
               than an Ordinary Wash
             </h2>
             <p className="text-muted-foreground text-sm leading-relaxed max-w-md">
-              CARDEE is Hubli's one-stop solution for professional car care — from deep interior cleaning and exterior detailing to ceramic coating, PPF, and paint protection. Our state-of-the-art facility defends your car against dust, acid rain, bird droppings, and more.
+              CARDEE is your one-stop solution for professional car care — from deep interior cleaning and exterior detailing to ceramic coating, PPF, and paint protection. Our state-of-the-art facility defends your car against dust, acid rain, bird droppings, and more.
             </p>
             <div className="flex flex-wrap gap-4">
               <a

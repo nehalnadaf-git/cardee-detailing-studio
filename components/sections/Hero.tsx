@@ -30,7 +30,7 @@ export default function Hero() {
               className="inline-flex items-center gap-2 bg-dark-secondary border border-dark-border rounded-full px-3 py-1.5"
             >
               <MapPin className="w-3 h-3 text-gold" />
-              <span className="text-muted-foreground text-[11px] tracking-wide">Unkal Cross, Vidyanagar, Hubli — Est. 2022</span>
+              <span className="text-muted-foreground text-[11px] tracking-wide">CarDee Detailing Studio — Est. 2022</span>
             </div>
 
             <h1
@@ -54,7 +54,7 @@ export default function Hero() {
               }}
               className="text-muted-foreground text-sm sm:text-base max-w-md leading-relaxed"
             >
-              Hubli's premium car care studio — expert detailing, ceramic coating, PPF, and paint protection with state-of-the-art facilities. Opp. Royal Oak Showroom, Vidyanagar.
+              Premium car care studio — expert detailing, ceramic coating, PPF, and paint protection with a state-of-the-art facility. Trusted by 1,500+ satisfied customers.
             </p>
 
             <div

@@ -4,18 +4,20 @@ import Providers from '@/components/Providers';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://cardeedetailing.com'),
-  title: 'CarDee Detailing Studio | Premium Car Detailing in Hubli',
+  title: 'CarDee Detailing Studio | Premium Car Care & Detailing',
   description:
-    "CarDee Detailing Studio — Hubli's premium car care studio. Expert interior detailing, ceramic coating, PPF, teflon coating, denting & repainting. Open 9:30 AM – 8:00 PM daily. Book now.",
+    "CarDee Detailing Studio — Expert interior detailing, ceramic coating, PPF, paint protection, denting & repainting. Professional car care for every vehicle. Open 9:30 AM – 8:00 PM daily. Book now.",
   keywords: [
-    'car detailing Hubli',
-    'ceramic coating Hubli',
-    'PPF Hubli',
-    'car wash Hubli',
-    'interior detailing Hubli',
-    'teflon coating',
+    'car detailing studio',
+    'ceramic coating',
+    'PPF installation',
+    'paint protection film',
+    'interior car detailing',
+    'exterior car wash',
+    'paint protection',
     'CarDee',
-    'car detailing studio Karnataka',
+    'professional car care',
+    'premium auto detailing',
   ],
   authors: [{ name: 'CarDee Detailing Studio' }],
   creator: 'CarDee Detailing Studio',
@@ -26,15 +28,15 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     url: 'https://cardeedetailing.com/',
     siteName: 'CarDee Detailing Studio',
-    title: 'CarDee Detailing Studio | Premium Car Detailing in Hubli',
+    title: 'CarDee Detailing Studio | Premium Car Care & Detailing',
     description:
-      "Hubli's premium car care studio. Ceramic coating, PPF, interior detailing, teflon coating & more. Opp. Royal Oak Showroom, Vidyanagar. Book your service today.",
+      "Premium car care studio. Ceramic coating, PPF, interior detailing, paint protection & more. Expert detailers, state-of-the-art facility. Book your service today.",
     images: [{ url: '/cardee logo/Cardee logo.webp', width: 800, height: 600, alt: 'CarDee Detailing Studio' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'CarDee Detailing Studio | Premium Car Detailing in Hubli',
-    description: "Hubli's premium car care studio. Ceramic coating, PPF, interior detailing & more.",
+    title: 'CarDee Detailing Studio | Premium Car Care & Detailing',
+    description: "Premium car care studio. Ceramic coating, PPF, interior detailing & more. Book your service today.",
     images: ['/cardee logo/Cardee logo.webp'],
   },
   manifest: '/site.webmanifest',
@@ -66,7 +68,7 @@ const localBusinessSchema = {
   name: 'CarDee Detailing Studio',
   image: '/cardee logo/Cardee logo.webp',
   description:
-    'Premium car detailing studio in Hubli offering ceramic coating, PPF, interior detailing, teflon coating, and denting & repainting.',
+    'CarDee Detailing Studio — premium car care offering ceramic coating, PPF, interior detailing, paint protection, and denting & repainting.',
   url: 'https://cardeedetailing.com',
   telephone: '+919008399596',
   address: {

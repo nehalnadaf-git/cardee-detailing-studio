@@ -10,7 +10,7 @@ const SERVICES = [
   'Exterior Wash & Polish',
   'Ceramic Coating',
   'Paint Protection Film (PPF)',
-  'Teflon Coating',
+  'Paint Protection',
   'Denting & Repainting',
 ];
 
@@ -238,7 +238,7 @@ export default function BookingModal() {
                 Book Your Service
               </h2>
               <p style={{ color: 'rgba(255,255,255,0.3)', fontSize: 11, marginTop: 3 }}>
-                Open daily · 9:30 AM – 8:00 PM · Hubli
+                Open daily · 9:30 AM – 8:00 PM · All vehicles welcome
               </p>
             </div>
             <button
