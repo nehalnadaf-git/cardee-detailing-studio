@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
-import { Play, X, ChevronLeft, ChevronRight, Volume2, VolumeX } from 'lucide-react';
+import { Play, X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useBooking } from '@/context/BookingContext';
 
 interface Video {
@@ -46,7 +46,6 @@ function Lightbox({
   hasPrev: boolean;
   hasNext: boolean;
 }) {
-  const [muted, setMuted] = useState(false);
 
   // Close on Escape / arrow keys
   useEffect(() => {
@@ -86,12 +85,6 @@ function Lightbox({
           </div>
           <div className="flex items-center gap-2">
             <button
-              onClick={() => setMuted(m => !m)}
-              className="w-8 h-8 rounded-full flex items-center justify-center border border-white/20 text-white/60 hover:text-white hover:border-white/40 transition-all"
-            >
-              {muted ? <VolumeX className="w-3.5 h-3.5" /> : <Volume2 className="w-3.5 h-3.5" />}
-            </button>
-            <button
               onClick={onClose}
               className="w-8 h-8 rounded-full flex items-center justify-center border border-white/20 text-white/60 hover:text-white hover:border-white/40 transition-all"
             >
@@ -103,8 +96,8 @@ function Lightbox({
         {/* Video */}
         <div className="relative w-full rounded-2xl overflow-hidden shadow-2xl border border-white/10" style={{ aspectRatio: '9/16' }}>
           <iframe
-            key={video.driveId + (muted ? '-m' : '')}
-            src={getEmbedUrl(video.driveId) + (muted ? '&mute=1' : '')}
+            key={video.driveId}
+            src={getEmbedUrl(video.driveId)}
             allow="autoplay; fullscreen"
             allowFullScreen
             style={{
