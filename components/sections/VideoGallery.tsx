@@ -107,8 +107,14 @@ function Lightbox({
             src={getEmbedUrl(video.driveId) + (muted ? '&mute=1' : '')}
             allow="autoplay; fullscreen"
             allowFullScreen
-            className="absolute inset-0 w-full h-full"
-            style={{ border: 'none' }}
+            style={{
+              border: 'none',
+              position: 'absolute',
+              top: '-20%', // pushes the top bar out
+              left: 0,
+              width: '100%',
+              height: '140%', // pushes the bottom bar out
+            }}
             title="CarDee"
           />
           {/* Gold corner accents */}
