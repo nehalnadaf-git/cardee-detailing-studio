@@ -43,7 +43,9 @@ export default function Hero() {
               }}
               className="text-[2.1rem] sm:text-5xl lg:text-[56px] font-bold text-white leading-[1.08] tracking-tight"
             >
-              Bringing Your Car&apos;s Shine Back to Life
+              <span className="block">Bringing Your</span>
+              <span className="block">Car &amp; Bikes&apos;</span>
+              <span className="block">Shine Back to Life</span>
             </h1>
 
             <p
